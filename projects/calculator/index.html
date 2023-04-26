@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <div id="keyboard">
+            <div id="screen">0</div>
+            <div class="rows">
+                <button id="ce" onclick="ce_button()">CE</button>
+                <button class="parentheses" onclick="inp('l')">(</button>
+                <button class="parentheses" onclick="inp('r')">)</button>
+                <button class="operation" onclick="inp('/')">&divide;</button>
+            </div>
+            <div class="rows">
+                <button onclick="inp('7')">7</button>
+                <button onclick="inp('8')">8</button>
+                <button onclick="inp('9')">9</button>
+                <button class="operation" onclick="inp('*')">&times;</button>
+            </div>
+            <div class="rows">
+                <button onclick="inp('4')">4</button>
+                <button onclick="inp('5')">5</button>
+                <button onclick="inp('6')">6</button>
+                <button class="operation" onclick="inp('+')">&plus;</button>
+            </div>
+            <div class="rows">
+                <button onclick="inp('1')">1</button>
+                <button onclick="inp('2')">2</button>
+                <button onclick="inp('3')">3</button>
+                <button class="operation" onclick="inp('-')">&minus;</button>
+            </div>
+            <div class="rows">
+                <button id="dot" onclick="inp('.')">.</button>
+                <button onclick="inp('0')">0</button>
+                <button id="equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="code.js"></script>
+</body>
+</html>

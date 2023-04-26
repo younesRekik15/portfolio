@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: inherit;
+    height: inherit;
+    background: #fff15b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theBoard{
+    width: 500px;
+    height: 500px;
+    background: #2db8bb;
+    border-radius: 5px;
+    position: relative;
+}
+.player1{
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    background: #ff8032;
+}
+.player2{
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    background: #ff8032;
+}
+.ball{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 240px;
+    top: 440px;
+
+    border-radius: 100%;
+    background-color: #bb2d2d;
+}

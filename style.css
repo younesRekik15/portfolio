@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+body{
+    width: 100%;
+    background:whitesmoke;
+    overflow-x: hidden;
+}
+
+div.nav{
+    width: inherit;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: #2F4858;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: #00000080 0 -5px 5px 5px;
+}
+
+.logo{
+    margin-left: 20px;
+}
+
+.nav nav{
+    font-size: 25px;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+div.a_container{
+    position: relative;
+}
+
+.a_container a{
+    width: 100%;
+    color: whitesmoke;
+    text-shadow: #00000080 0 0 3px;
+    text-decoration: none;
+}
+
+.a_container a::after{
+    content: '';
+    position: absolute;
+    background-color: whitesmoke;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    transition: width 0.3s linear;
+}
+.a_container a:hover::after{
+    width: 100%;
+    right: 0;
+}
+#home{
+    width: inherit;
+    margin-top: 60px;
+    height: 500px;
+    background: #ffff;
+}
+
+#myProjects{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background: #679092;
+    perspective: 1000px;
+    perspective-origin: 75%;
+}
+#myProjects .text{
+    width: 50%;
+    height: inherit;
+}
+#myProjects .links{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 1000px;
+    perspective-origin: 50% -200px;
+    transform: rotateX(-20deg);
+}
+#myProjects .links a{
+    width: 300px;
+    height: 300px;
+}
+/* bar ball game */
+.links .img_1{
+    position: absolute;
+    transform-origin: 150px 150px -150px;
+    animation: rotation1 10s infinite linear;
+}
+@keyframes rotation1 {
+    0%{transform: rotateY(90deg);}
+    0%{z-index: 3;animation:normal;}
+    25%{transform: rotateY(180deg);}
+    25%{z-index: 2;animation:normal;}
+    50%{transform: rotateY(270deg);}
+    50%{z-index: 3;animation:normal;}
+    75%{transform: rotateY(360deg);}
+    75%{z-index: 4;animation:normal;}
+    100%{transform: rotateY(450deg);}
+    100%{z-index: 3;animation:normal;}
+}
+/* snake game */
+.links .img_2{
+    position: absolute;
+    transform-origin: 150px 150px -150px;
+    animation: rotation2 10s infinite linear;
+}
+@keyframes rotation2 {
+    0%{transform: rotateY(180deg);}
+    0%{z-index: 2;animation:normal;}
+    25%{transform: rotateY(270deg);}
+    25%{z-index: 3;animation:normal;}
+    50%{transform: rotateY(360deg);}
+    50%{z-index: 4;animation:normal;}
+    75%{transform: rotateY(450deg);}
+    75%{z-index: 3;animation:normal;}
+    100%{transform: rotateY(540deg);}
+    100%{z-index: 2;animation:normal;}
+}
+/* calculator */
+.links .img_3{
+    position: absolute;
+    transform: rotateY(270deg);
+    transform-origin: 150px 150px -150px;
+    animation: rotation3 10s infinite linear;
+}
+@keyframes rotation3 {
+    0%{transform: rotateY(270deg);}
+    0%{z-index: 3;animation:normal;}
+    25%{transform: rotateY(360deg);}
+    25%{z-index: 4;animation:normal;}
+    50%{transform: rotateY(450deg);}
+    50%{z-index: 3;animation:normal;}
+    75%{transform: rotateY(540deg);}
+    75%{z-index: 2;animation:normal;}
+    100%{transform: rotateY(630deg);}
+    100%{z-index: 3;animation:normal;}
+}
+.links .img_4{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #c35117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 150px 150px -150px;
+    animation: rotation4 10s infinite linear;
+}
+
+@keyframes rotation4 {
+    0%{transform: rotateY(0deg);}
+    0%{z-index: 4;animation:normal;}
+    25%{transform: rotateY(90deg);}
+    25%{z-index: 3;animation:normal;}
+    50%{transform: rotateY(180deg);}
+    50%{z-index: 2;animation:normal;}
+    75%{transform: rotateY(270deg);}
+    75%{z-index: 3;animation:normal;}
+    100%{transform: rotateY(360deg);}
+    100%{z-index: 4;animation:normal;}
+}
+.links .img_4::after{
+    content: 'all';
+    font-size: 50px;
+    color: azure;
+}
+/* the top side of projects box */
+.links .topBox{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #c35117;
+    z-index: 4;
+    transform-origin: 150px 150px -150px;
+    animation: rotation5 10s infinite linear;
+}
+@keyframes rotation5 {
+    0%{transform: rotateY(0deg) rotateX(90deg);}
+    25%{transform: rotateY(90deg) rotateX(90deg);}
+    50%{transform: rotateY(180deg) rotateX(90deg);}
+    75%{transform: rotateY(270deg) rotateX(90deg);}
+    100%{transform: rotateY(360deg) rotateX(90deg);}
+}
+/* start test 
+
+
+
+
+
+
+
+.shadow{
+    width: 50%;
+    height: 100%;
+    position:absolute;
+    perspective: 1000px;
+    left:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective-origin: 50% 200px;
+    transform: skew(45deg) rotate(-45deg);
+}
+
+
+
+.shadow .img_1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: black;
+    transform-origin: 150px 150px -150px;
+    animation: rotation1 10s infinite linear;
+}
+@keyframes rotation1 {
+    0%{transform: rotateY(90deg);}
+    0%{z-index: 2;animation:normal;}
+    25%{transform: rotateY(180deg);}
+    25%{z-index: 1;animation:normal;}
+    50%{transform: rotateY(270deg);}
+    50%{z-index: 2;animation:normal;}
+    75%{transform: rotateY(360deg);}
+    75%{z-index: 3;animation:normal;}
+    100%{transform: rotateY(450deg);}
+    100%{z-index: 3;animation:normal;}
+}
+.shadow .img_2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: black;
+    transform-origin: 150px 150px -150px;
+    animation: rotation2 10s infinite linear;
+}
+@keyframes rotation2 {
+    0%{transform: rotateY(180deg);}
+    0%{z-index: 1;animation:normal;}
+    25%{transform: rotateY(270deg);}
+    25%{z-index: 2;animation:normal;}
+    50%{transform: rotateY(360deg);}
+    50%{z-index: 3;animation:normal;}
+    75%{transform: rotateY(450deg);}
+    75%{z-index: 2;animation:normal;}
+    100%{transform: rotateY(540deg);}
+    100%{z-index: 1;animation:normal;}
+}
+.shadow .img_3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: black;
+    transform: rotateY(270deg);
+    transform-origin: 150px 150px -150px;
+    animation: rotation3 10s infinite linear;
+}
+@keyframes rotation3 {
+    0%{transform: rotateY(270deg);}
+    0%{z-index: 2;animation:normal;}
+    25%{transform: rotateY(360deg);}
+    25%{z-index: 3;animation:normal;}
+    50%{transform: rotateY(450deg);}
+    50%{z-index: 2;animation:normal;}
+    75%{transform: rotateY(540deg);}
+    75%{z-index: 1;animation:normal;}
+    100%{transform: rotateY(630deg);}
+    100%{z-index: 2;animation:normal;}
+}
+.shadow .img_4{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: black;
+    transform-origin: 150px 150px -150px;
+    animation: rotation4 10s infinite linear;
+}
+
+@keyframes rotation4 {
+    0%{transform: rotateY(0deg);}
+    0%{z-index: 3;animation:normal;}
+    25%{transform: rotateY(90deg);}
+    25%{z-index: 2;animation:normal;}
+    50%{transform: rotateY(180deg);}
+    50%{z-index: 1;animation:normal;}
+    75%{transform: rotateY(270deg);}
+    75%{z-index: 2;animation:normal;}
+    100%{transform: rotateY(360deg);}
+    100%{z-index: 3;animation:normal;}
+}
+
+.shadow .topBox{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: black;
+    z-index: 3;
+    transform-origin: 150px 150px -150px;
+    animation: rotation5 10s infinite linear;
+}
+@keyframes rotation5 {
+    0%{transform: rotateY(0deg) rotateX(90deg);}
+    25%{transform: rotateY(90deg) rotateX(90deg);}
+    50%{transform: rotateY(180deg) rotateX(90deg);}
+    75%{transform: rotateY(270deg) rotateX(90deg);}
+    100%{transform: rotateY(360deg) rotateX(90deg);}
+}
+
+
+
+
+
+
+
+
+
+endTest */
+a img{
+    width: 300px;
+    height: 300px;
+}
+
+#contact{
+    width: inherit;
+    height: 300px;
+    background-color: #AF1B3F;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+form{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+
+}
+
+.formular{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 10%;
+    color: whitesmoke;
+    font-size: 20px;
+}
+input{
+    border: none;
+    border-radius: 2px;
+    margin: 3% 0;
+    width: 300px;
+    height: 30px;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: right;
+    width: 30%;
+    height: inherit;
+    color: whitesmoke;
+    font-size: 20px;
+}
+.message textarea{
+    border: none;
+    border-radius: 2px;
+    margin-top: 3%;
+    width: 60%;
+    height: 60%;
+
+}
+input[type='submit']{
+    font-size: 20px;
+    color: #2F4858;
+    height: 40px;
+}
+input[type='submit']:hover{
+    cursor: pointer;
+}
